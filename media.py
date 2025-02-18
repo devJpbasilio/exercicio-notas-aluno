@@ -16,20 +16,20 @@ def aprovar_reprovar(media):
         return f"Aluno reprovado!"
 
 
-numeros = [] # Cria uma lista
+notas = [] # Cria uma lista
 
 # Cria um loop pedindo as notas ao usuário
 for i in range(4):
     while True:
         try:
             num = float(input(f"Digite a {i+1}ª nota: "))
-            numeros.append(num)
+            notas.append(num)
             break
         except ValueError:
             print("Digite uma nota valida!")
 
 
-media = calcular_media(numeros) # Armazenar a média em uma variável
+media = calcular_media(notas) # Armazenar a média em uma variável
 
 # Chamar a função aprovar_reprovar() e exibir o resultado
 print(f"\nA média do aluno: {media:.2f}")
